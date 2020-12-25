@@ -1,5 +1,10 @@
-div{
-    border: 1px solid red;
-    height: 100px;
-    width: 100px;
+let div1 = document.createElement('div');
+div1.className = 'demo'
+
+document.body.appendChild(div1);
+
+
+document.body.onclick = function (e) {
+    div1.style.top = e.clientX + 'px'
+    div1.style.left = e.clientY + 'px'
 }
