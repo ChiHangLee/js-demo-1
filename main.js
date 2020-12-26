@@ -22,3 +22,7 @@ document.body.onmousemove = function (e) {
         div1.style.left = e.clientX + 'px'
     }
 }
+
+div1.onmouseup = function () {
+    dragging = false
+}
