@@ -18,8 +18,10 @@ document.body.onmousemove = function (e) {
     if (dragging === true) {
         console.log(lastX, lastY)
         console.log(e.clientX, e.clientY)
-        div1.style.top = e.clientY + 'px'
-        div1.style.left = e.clientX + 'px'
+        var deltaX = e.clientX - lastX
+        var deltaY = e.clientY - lastY
+        div1.style.top = div1.style.top + deltaY
+        div1.style.left = div1.style.left + deltaX
     }
 }
 
