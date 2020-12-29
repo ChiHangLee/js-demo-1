@@ -15,7 +15,7 @@ div1.onmousedown = function (e) {
     dragging = true
 }
 
-document.body.onmousemove = function (e) {
+document.onmousemove = function (e) {
     if (dragging === true) {
         console.log(lastX, lastY)
         console.log(e.clientX, e.clientY)
