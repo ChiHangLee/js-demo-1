@@ -28,6 +28,6 @@ document.onmousemove = function (e) {
     }
 }
 
-div1.onmouseup = function () {
+document.onmouseup = function () {
     dragging = false
 }
