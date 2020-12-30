@@ -21,6 +21,14 @@ document.onmousemove = function (e) {
         var deltaY = e.clientY - lastY
         var top = parseInt(div1.style.top) || 0
         var left = parseInt(div1.style.left) || 0
+        var resultY = top + deltaY
+        var resultX = left + deltaX
+        if (resultY < 0) {
+            resultY = 0
+        }
+        if (resultX < 0) {
+            resultX = 0
+        }
         div1.style.top = top + deltaY + 'px'
         div1.style.left = left + deltaX + 'px'
         lastX = e.clientX
